@@ -3,26 +3,25 @@
   margin: 0px;
   box-sizing: border-box;
 }
+@mixin flex($value) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $value;
+}
 
 #main {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(column);
   background-color: rgba(27, 27, 228, 0.274);
   color: azure;
   gap: 10px;
 }
-
 #center {
   width: 600px;
   height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  @include flex(row);
   align-items: flex-start;
   padding: 30px;
   border-radius: 20px;
@@ -32,10 +31,7 @@
 }
 
 #card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(column);
   gap: 10px;
   border: 1px solid black;
   background-color: #87ceeb;
@@ -44,7 +40,6 @@
   width: 250px;
   height: 300px;
 }
-
 #inp {
   height: 26px;
   border-radius: 20px;
@@ -53,12 +48,13 @@
   border-style: none;
   cursor: pointer;
 }
-
-#butt {
+#butt{
   position: relative;
-  top: 18px;
+  top:18px;
+  &:hover{
+   
+    color: red;
+    cursor: pointer;
+
+  }
 }
-#butt:hover {
-  color: red;
-  cursor: pointer;
-}/*# sourceMappingURL=index.css.map */
