@@ -41,7 +41,7 @@ const App = () => {
                         onChange={(event) => setstate(event.target.value)} autocomplete="off"  /> <button id="butt" onClick={fin} >Search</button><br />
                     {!city ? (
 
-                        <p>"No data found"</p>) : (<>
+                        <p>"No data found 😥"</p>) : (<>
 
                             <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="google" id="im" />
                             <h2>{sec}</h2>
